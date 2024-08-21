@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello {{person_name}}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/djadmincss/admin.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+      
+    <div class="header">
+        <h1>Hello Admin</h1>
+
+    </div>
+
+    <div class="body">
+        <div class="sidebar">
+            <a href="#" class="homebutton"><i class="fa-solid fa-house-chimney"></i>Home</a> <br>
+            <a href="{% url 'admin_add_app' %}" class="addbutton"><i class="fa-solid fa-plus"></i>Add Apps</a>
+            <a href="{% url 'admin_logout' %}" style="background-color: #ba34eb;
+                        border: none;
+                        color: white;
+                        padding: 15px 45px;
+                        text-align: center;
+                        text-decoration: none;
+                        display: flex;
+                        align-items: center;
+                        font-size: 16px;
+                        font-weight: bold;
+                        margin: 35px 2px;
+                        cursor: pointer;
+                        ">
+                        <i class="fa-solid fa-right-from-bracket" style="margin-right: 8px;"></i> Logout
+                    </a>
+           
+        </div>
+
+        <div class="dashboard">
+
+            <h1 class="admin_text">Welcome Admin Dashboard</h1>
+           
+        
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <h3>Contact</h3>
+        <h4>admin@gmail.com</h4>
+
+       
+    </div>
+
+    
+    {% comment %} <ul id="admin_dashboard">
+        
+    </ul>   {% endcomment %}
+   
+     
+    
+    <!-- Link to the external JavaScript file -->
+    <script src="{% static 'js/djadmin_js/admin.js' %}"></script>
+
+</body>
+</html>

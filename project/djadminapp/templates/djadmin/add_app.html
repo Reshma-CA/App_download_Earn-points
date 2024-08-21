@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello Admin</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/djadmincss/add_app.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+      
+    <div class="header">
+        <h1>Hello Admin</h1>
+    </div>
+
+    <div class="body">
+        <div class="sidebar">
+            <a href="{% url 'admin_dashboard' %}" class="homebutton"><i class="fa-solid fa-house-chimney"></i>Home</a>
+            <a href="#" class="addbutton"><i class="fa-solid fa-plus"></i>Add Apps</a>
+            <a href="{% url 'admin_logout' %}" style="background-color: #ba34eb;
+            border: none;
+            color: white;
+            padding: 15px 45px;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 35px 2px;
+            cursor: pointer;
+            ">
+            <i class="fa-solid fa-right-from-bracket" style="margin-right: 8px;"></i> Logout
+        </a>
+
+        </div>
+    
+        <div class="dashboard">
+            <div class="form-container">
+                <form id="app-form">
+                    <div class="app_img">
+                        <img src="{% static 'image/image_upload.png' %}" id="app_image" alt="App Image">
+                        <input type="file" name="app_image" id="file" accept="image/*" required>
+                    </div>
+
+                    <div class="app_form">
+                        <label for="app_name">App Name:</label>
+                        <input type="text" id="app_name" name="name" required>
+
+                        <label for="app_link">App Link:</label>
+                        <input type="url" id="app_link" name="app_link" required>
+
+                        <label for="app_category">App Category:</label>
+                        <select id="app_category" name="category" required>
+                            <!-- Options will be populated dynamically -->
+                        </select>
+
+                        <label for="sub_category">Sub Category:</label>
+                        <select id="sub_category" name="sub_category" required>
+                            <!-- Options will be populated dynamically -->
+                        </select>
+
+                        <label for="points">Add Points:</label>
+                        <input type="number" id="points" name="points" min="0" required>
+
+                        <button type="submit" class="submit-button">Submit</button>
+                    </div>
+                </form>
+                 <!-- Success message display -->
+        <div id="success-message" style="color: green; display: none;"></div>
+            </div>
+
+            <!-- Div for dynamic app list content -->
+            <div id="admin_add_app"></div>
+        </div>
+
+        <!-- Error message display -->
+        <div id="error-message" style="color: red; display: none;"></div>
+        
+       
+    </div>
+
+    <!-- Include CSRF token in the page -->
+    <script type="text/javascript">
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+        const csrftoken = getCookie('csrftoken');
+    </script>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="{% static 'js/djadmin_js/add_app.js' %}"></script>
+</body>
+</html>

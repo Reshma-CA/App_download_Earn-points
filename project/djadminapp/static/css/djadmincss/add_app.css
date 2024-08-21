@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-size: 10px; /* Adjust font size */
+    padding: 10px;
+}
+
+.body {
+    display: flex;
+    padding: 20px;
+    background-color: rgb(211, 230, 248);
+}
+
+.sidebar {
+    height: auto;
+    margin-right: 20px;
+    width: 150px;
+}
+
+.homebutton {
+    background-color: white;
+    border: none;
+    border: 2px solid #008CBA;
+    color: rgb(72, 10, 204);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.homebutton i {
+    margin-right: 8px;
+}
+
+.addbutton {
+    background-color: rgb(78, 17, 220);
+    border: none;
+    border: 2px solid #008CBA;
+    color: white;
+    padding: 15px 21px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+.addbutton i {
+    margin-right: 8px;
+}
+
+.dashboard {
+    flex-grow: 1;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.app_img {
+    width: 300px;
+    height: 220px;
+    margin: 20px auto;
+    position: relative;
+}
+
+#app_image {
+    width: 100%;
+    height: 100%;
+    border: 2px solid gray;
+    cursor: pointer;
+}
+
+#file {
+    display: none;
+}
+
+.app_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app_form label {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.app_form input,
+.app_form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.add-points,
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.add-points {
+    background-color: rgb(78, 17, 220);
+}
+
+.submit-button {
+    background-color: rgb(236, 96, 50);
+}
+
+
+
+

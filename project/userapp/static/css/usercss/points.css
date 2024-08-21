@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header{
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-size: 10px;
+    padding: 10px;
+}
+.body{
+    display: flex;
+    padding: 20px;
+    background-color: rgb(211, 230, 248);
+    padding-top: 50px;
+    height: 550px;
+}
+
+.sidebar{
+    height: auto; /* Adjusted height to fit content */
+    margin-right: 20px;
+    width: 150px;
+}
+.addprofile {
+    background-color: white;
+    border: none;
+    border: 2px solid #008CBA;
+    color: rgb(72, 10, 204);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.addprofile i {
+    margin-right: 8px; /* Adjust the value to control the space */
+  }
+
+.homebutton {
+    background-color: rgb(78, 17, 220);
+    border: none;
+    border: 2px solid #008CBA;
+    color: white;
+    padding: 15px 21px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.homebutton i {
+    margin-right: 8px; /* Adjust the value to control the space */
+}
+
+.addpoints {
+    background-color: white;
+    border: none;
+    border: 2px solid #008CBA;
+    color: rgb(72, 10, 204);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.addpoints i {
+    margin-right: 8px; /* Adjust the value to control the space */
+}
+
+.addtask {
+    background-color: white;
+    border: none;
+    border: 2px solid #008CBA;
+    color: rgb(72, 10, 204);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.addtask i {
+    margin-right: 8px; /* Adjust the value to control the space */
+}
+
+.logoutbutton{
+    background-color: #ba34eb;
+                        border: none;
+                        color: white;
+                        padding: 15px 45px;
+                        text-align: center;
+                        text-decoration: none;
+                        display: flex;
+                        align-items: center;
+                        font-size: 16px;
+                        font-weight: bold;
+                        margin: 35px 2px;
+                        cursor: pointer;
+}
+.logoutbutton i {
+    margin-right: 8px; /* Adjust the value to control the space */
+}
+
+
+
+
+.footer{
+    background-color: black;
+    color:white;
+}
+
+h3,h4{
+    text-align: center;
+    
+
+}
+
+.app_list_details {
+    flex-grow: 1;
+    background-color: white;
+    padding: 20px;
+    margin-left: 30px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.item {
+    width: 1200px; /* More width */
+    height: 350px; /* Less height */
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 10px 20px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.item img {
+    max-width: 150px; /* Adjust image size */
+    height: auto;
+    margin-left: 20px; /* Add some space between text and image */
+    border-radius: 5px; /* Optional: rounded corners for the image */
+}
+
+.item .details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text items to the start (left) */
+    justify-content: center;
+    flex-grow: 1; /* Allow this section to grow */
+    margin-right: 20px; /* Space between text and image */
+}
+
+.item h2 {
+    font-size: 24px;
+    color: #333;
+    margin: 0 0 10px 0;
+}
+
+.item a p {
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.point {
+    background-color: #ea3058;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 490px;
+    height: 90px;
+    width: 220px;
+}
+
+

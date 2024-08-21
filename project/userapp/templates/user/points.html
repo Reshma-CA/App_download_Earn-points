@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello Admin</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/usercss/points.css' %}"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+      
+    <div class="header">
+        <h1>Hello {{ person_name }}</h1>
+
+    </div>
+
+    <div class="body">
+        <div class="sidebar">
+            <a href="{% url 'home' %}" class="homebutton"><i class="fa-solid fa-house-chimney"></i>Home</a> <br>
+            <a href="{% url 'profile' %}" class="addprofile"><i class="fa-solid fa-user"></i>Profile</a><br>
+            <a href="{% url 'points' %}" class="addpoints"><i class="fa-regular fa-map"></i>Points</a><br>
+            <a href="{% url 'task' %}" class="addtask"><i class="fa-solid fa-list-check"></i>Task</a><br>
+            
+            <a href="{% url 'logout' %}" class="logoutbutton"><i class="fa-solid fa-right-from-bracket" style="margin-right: 8px;"></i> Logout</a>
+           
+        </div>
+
+        <div class="app_list_details">
+
+            <div class="item">  
+                
+
+                <button class="point">Your points:{{ user_points }}</button>
+                 
+
+
+            </div>
+
+          
+           
+        
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <h3>Contact</h3>
+        <h4>user@gmail.com</h4>
+
+       
+    </div>
+
+    
+    {% comment %} <ul id="apps-list">
+        
+    </ul>  {% endcomment %}
+   
+     
+    
+    <!-- Link to the external JavaScript file -->
+    <script src="{% static 'js/djadmin_js/admin.js' %}"></script>
+
+</body>
+</html>

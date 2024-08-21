@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insufficient Points</title>
+    <link rel="stylesheet" href="{% static 'css/usercss/app_downloader.css' %}">
+</head>
+<body>
+    <div class="task_not">
+        <h2>Hello, {{ person_name }}</h2>
+        <div class="success-image">
+            <img src="{% static 'image/tic.jpeg' %}" alt="Success Image">
+
+        </div>
+        <h1>"You've successfully downloaded the app! Don't forget to upload a screenshot to earn your points."</h1><br><br>
+
+        {% comment %} <a href="{% url 'task' %}" ><button>Back to task</button></a> {% endcomment %}
+        <a href="{% url 'task' %}" class="logoutbutton">Back to task</a>
+        
+    </div>
+</body>
+</html>
